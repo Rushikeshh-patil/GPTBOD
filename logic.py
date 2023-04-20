@@ -16,6 +16,11 @@ def generate_prompt():
     df = import_excel_to_pandas('/Users/rushikesh/Library/CloudStorage/GoogleDrive-rdp352@nyu.edu/My Drive/Rushikesh-Windows/GPTBOD/mechanical_list.xlsm')
     system = df[df['CATEGORY'] == 'AIR DISTRIBUTION']
     equipment = system['EQUIPMENT TAG'].tolist()
+    prompt = '''Mechanical:
+    
+    Air Handling units: 
+    
+    '''
     
 generate_prompt()
 
