@@ -1,0 +1,14 @@
+Write a narrative for the system with following mechanical system description. 
+
+Mechanical: 
+Cooling system type : {{cooling_type}}
+Chilled water distribution : {chwp}
+Heating system type : {{heating_type}}
+Hot water distribution : {chwp}
+number of AHUs : {{ahu_num}}
+Ahu Zoning : {{Ahu_zone}}
+Ahu options : {{comments}}
+Exhaust Systems : {{exhausts_detail}}
+Dedicated systems: {{special_rooms_data}}
+
+Keep the narrative extremely detailed. Narrative should have appropriate titles and professional language. {{codes}}. explain terms like economizer where necessary. add a conclusion. 
