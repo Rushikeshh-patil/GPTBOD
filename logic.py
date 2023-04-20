@@ -5,6 +5,10 @@ import docx
 #Setting authorization
 openai.api_key = ""
 
+#Opening the prompt file
+
+
+
 #Reading Excel
 def import_excel_to_pandas(filepath):
     df = pd.read_excel(filepath)
@@ -16,12 +20,26 @@ def generate_prompt():
     df = import_excel_to_pandas('/Users/rushikesh/Library/CloudStorage/GoogleDrive-rdp352@nyu.edu/My Drive/Rushikesh-Windows/GPTBOD/mechanical_list.xlsm')
     system = df[df['CATEGORY'] == 'AIR DISTRIBUTION']
     equipment = system['EQUIPMENT TAG'].tolist()
-    prompt = '''Mechanical:
     
-    Air Handling units: 
+# Cooling system type : {{cooling_type}}
     
-    '''
-    
+# Chilled water distribution : {chwp}
+
+# Heating system type : {{heating_type}}
+
+# Hot water distribution : {chwp}
+
+# number of AHUs : {{ahu_num}}
+
+# Ahu Zoning : {{Ahu_zone}}
+
+# Ahu options : {{comments}}
+
+# Exhaust Systems : {{exhausts_detail}}
+
+# Dedicated systems: {{special_rooms_data}}
+
+
 generate_prompt()
 
 #Sending to Openai to generate text
